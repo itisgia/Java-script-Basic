@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>05.01 work</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+
+    <button onclick="hideDiv()">
+    </button>
+    <div id="myDiv">
+    </div>
+
+
+    <script>
+
+// when button is clicked. make the box dissapeared
+    function hideDiv() {
+      console.log ('clicked')
+      var getDiv = document.getElementById("myDiv");
+      console.dir(getDiv);
+      getDiv.style.display = 'none'; // don't forget to put '' tag and ';' !!
+      // or ---.style.height = 0; , ---style.visibility = 'hidden';
+    }
+    //   colorChange();
+    // }
+    //
+    // function colorChange() {
+    // document.getElementById("myDiv").style.backgroundColor = "pink";
+    // }
+
+    </script>
+
+  </body>
+</html>
