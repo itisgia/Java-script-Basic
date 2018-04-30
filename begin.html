@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Begin Html</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+      .some-class /*selector*/{
+        color:#738db7; font-weight: 800; font-size: 4em;
+      }
+    </style>
+
+  </head>
+  <body>
+    <h1 id="domHeader" class="some-class">Hello World</h1>
+
+  <script>
+
+  //1.cosole.alert
+  //2.console.log
+  //3.console,dir
+    //grabing the element form the dom(document object module = html)
+    // var getId = document.getElementById('domHeader');
+    // console.log(getId);
+    // console.dir(getId.textContent);
+    // getId.textContent = 'Something Else Please' //textchange
+    // getId.style.color = '#b39ec1'; //color change
+    //if you put 'this' in log(this), it calls everything so not working
+    // var intro = 'My name is ';
+    // var whatName = 'Jiah';
+    // var number = 22;
+    //
+    // console.log(intro + whatName + " and my age is " + number);
+
+    function doSomething() {
+        var getId = document.getElementById('domHeader');
+        getId.style.color = '#b39ec1';
+    }
+    //it's not working (color change). so you need "step1. write the function" "step 2. fire the function"
+    setTimeout(doSomething, 5000)//colour changes in 5000ms blue
+    // doSomething(); // function fired
+
+
+
+  </script>
+  </body>
+</html>
