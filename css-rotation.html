@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		* {
+		    margin:0;
+		    padding:0;
+		  }
+		html {
+			max-width: 100%;
+			margin: 30px;
+		  background-color: #DDD;
+		}
+		.css-square {
+		    width: 100px;
+		    height: 100px;
+		    background-color: #111;
+		    -webkit-transition: -webkit-transform .8s ease-in-out;
+		    -ms-transition: -ms-transform .8s ease-in-out;
+		    transition: transform .8s ease-in-out;
+		}
+		/* .css-square:hover {
+			cursor: pointer;
+		    transform:rotate(180deg);
+		    -ms-transform:rotate(180deg);
+		    -webkit-transform:rotate(deg); */
+
+				/*instead of giving :hover you can do this*/
+				
+				.spin{
+					transform:rotate(180deg);
+				 -ms-transform:rotate(180deg);
+				 -webkit-transform:rotate(deg);
+				}
+		}
+	</style>
+</head>
+<body>
+	<div class="css-square"></div>
+</body>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script>
+	$(document).click(function(){
+		console.log('worked');
+		$('.css-square').addClass('spin');
+	});
+
+
+</script>
+</html>

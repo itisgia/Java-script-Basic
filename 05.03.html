@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>work</title>
+    <style>
+
+    body{
+      width: 100vw;
+      background-color:#b3b58b;
+    }
+    p{
+      display: block;
+      font-family: 'Amatic SC', cursive;
+      font-size: 100px;
+      text-align: center;
+      color:black;
+    }
+    #divbox{
+      margin:0 auto;
+    }
+
+    #button{
+      font-family: 'Amatic SC', cursive;
+      border:none;
+      left: 50%;
+      right: 50%;
+
+    }
+    hr{
+      width: 5em;
+      color: black;
+      height: 2px;
+      background-color: black;
+      color: black;
+    }
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+  </head>
+  <body>
+        <div id="divbox">
+          <button  id="button"type="button" name="button" onclick="click">Click Me</button>
+      </div>
+  </body>
+  <hr>
+  <p class="name">Jiah kwon</p>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+	<script>
+
+$(document).ready(function(){
+    $('#button').one('click', function(){
+      console.log('clicked');
+        $('.name').append(' from Korea!')
+          .css("color" , "grey")
+          .slideUp(2000)
+          .slideDown(2000);
+          console.log('worked');
+        $('body').css("background-color", "#c3d3e2");
+
+
+
+    });
+});
+//scroll - nicolas law firm site. 
+
+
+
+// $('.name').css({"color":"#98b4bc"});
+$('#button').css({"font-size":"100px","margin-top":"30px","background-color" :"transparent" });
+  </script>
+</html>
