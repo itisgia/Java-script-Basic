@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+<!-- what push can do  -->
+    <form class="" action="index.html" method="post">
+      <input type="text" name="fname" value="" id="adInput">
+      <button id="trigger"type="button" name="button" style="margin-top: 2.5em">Triger</button>
+    </form>
+    <p id="input"></p>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js">
+    </script>
+    <script type="text/javascript">
+
+      $(document).ready(function(){
+
+
+        // console.dir(getValue);
+          $('#trigger').click(function(){
+
+            var getValue = document.getElementById('adInput')/*.value*/;
+            var getNumber = parseInt(getValue);
+
+           //Here we are logging the number var creathed with parseInt method
+
+           //parseInt turns string into a number!
+
+
+            // console.log(typeof getNumber);
+
+
+            // if put some numbers in a box, it'a string. then how can we change a sting into a  number?
+            // --> var getNumber = parseInt();
+
+
+            // if/else statement
+            // if(getValue === 'something'){
+            //   alert('hello');
+            // }else{
+            //   alert('goodbye');
+            // }
+
+
+
+            // var trueVal = 'something';
+            //var trueVal = true;
+            // var falseVal = false;
+            // var trueVal; // turns into false! simethins by dafylt carry by true/false
+            // var trueVal=1; //result:t
+              // var trueVal=0;//reslyt : f
+
+            if(getValue /*trueVal/*/   /===true// don't need to have == true){
+            ){
+              console.log('its true');   //it exsit in the dom .
+            }else {
+              console.log(' its false ! ');
+            }
+
+          });//click functuon ends here
+
+      });
+    </script>
+  </body>
+</html>

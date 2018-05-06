@@ -2,66 +2,35 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Friday assi</title>
+    <title>Cassino</title>
   </head>
+  <style media="screen">
+    button {
+      font-size: 3em;
+    }
+  </style>
   <body>
+<button type="button" name="button" onclick="bling()">Click me</button>
+<h2 id="info" class="dace">Random number will pop here!</h2>
 
-<p id="cost">$</p>
-<p id="info"></p>
-<button type="button" name="button" onclick="myClick()">Click me!</button>
+
+
+
+
 
 
 <script>
-//work1 :code review
-    // Create three variables to store the information needed.
-function calculate (){
 
-  var price = 30;
-  var quantity = 5;
-  var total = price * quantity;
-  var el = document.getElementById('cost');
-  console.log (total);
-  console.dir(el.innerText + total);
+var randomNum = Math.floor((Math.random() * 10) + 1);
+var el = document.getElementById('info');
 
-}
-calculate();
-// document.write(total + '<br />');
-// document.write(el.innerText + total);
-//
-//
-// // el.textContent = '$' + total;
-
-
-//work 2
-
-// Create a variable to hold a random number between 1 and 10
-
-
-var el = document.getElementById('info')
-
-function myClick() {
-  console.log('clicked');
-  var randomNum = Math.floor((Math.random() * 10) + 1);
-  Math.floor(randomNum);
+function bling(){
+  console.log('worked');
+  bling.preventDefault()
+   el.innerHTML = randomNum;
 }
 
-myClick();
 
-// // Write the number into that element
-// el.innerHTML = '<h2>random number</h2><p>' + randomNum + '</p>';
-
-
-
-
-
-
-
-//  textContent does not work in IE8 or earlier
-// You can use innerHTML, but note the security issues on p228-231
-// el.innerHTML = '$' + total;
-
-
-
-    </script>
+</script>
   </body>
 </html>
