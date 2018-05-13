@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <style media="screen">
+      body ,html{
+        background-color: #b29c90;
+        font-family: 'Oswald', sans-serif;
+        font-size: 16px;
+        height: 100vh;
+      }
+      li{
+        font-size: 2em;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li id="one">1</li>
+      <li id="two">2</li>
+      <li id="three">3</li>
+      <li id="four">4</li>
+      <li>5</li>
+      <li>6</li>
+      <li>7</li>
+    </ul>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.js">
+
+    </script>
+    <script type="text/javascript">
+
+    function changeColor( color, id ){
+      // var el = document.getElementById('one')
+      // el.style.color = '#9c8da0';
+
+      // instead of writing bunch of fuction, you can do this
+
+      var el = document.getElementById(id);
+      el.style.color = color;
+      // setTimeout(function(){
+      //   $('#' + id).hide(1000);//??????
+      // }, 2000)
+
+    };
+
+   changeColor('purple' ,'three');
+   changeColor('red' ,'one');
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+  </body>
+</html>

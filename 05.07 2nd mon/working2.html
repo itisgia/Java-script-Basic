@@ -33,9 +33,9 @@
 
 // //fuction expression
 //
-var expression = function () {
-  alert('This is a fuction expression!')
-}();//calling itself istead of expression();
+// var expression = function () {
+//   alert('This is a fuction expression!')
+// }();//calling itself istead of expression();
 //
 //
 // expression();// you can call func after it's written
@@ -45,25 +45,29 @@ var expression = function () {
 
 
 
-    // $(document).ready(function(){
-    //
-    //     var stringArray = [];
-    //
-    //
-    //     $('#trigger').click(function(){
-    //
-    //       var getValue = document.getElementById('adInput').value;
-    //
-    //       if(getValue === 'remove'){
-    //         //this will only happen if soetme typ w remove
-    //         stringArray.pop();
-    //       } else {
-    //           stringArray.push(getValue);
-    //           alert('popped or deleted last elemennt');
-    //       }
-    //     });//click functuon ends here
-    //
-    // });
+    $(document).ready(function(){
+
+        var stringArray = [];
+
+
+        $('#trigger').click(function(){
+          console.log('clicked');
+          var getValue = document.getElementById('adInput').value;
+
+          if(getValue === 'remove'){
+            //this will only happen if soetme typ w remove
+            stringArray.pop();
+            alert('popped or deleted last elemennt');
+
+          } else {
+              stringArray.push(getValue);
+
+          }
+
+          console.log(stringArray);
+        });//click functuon ends here
+
+    });
     </script>
   </body>
 </html>
