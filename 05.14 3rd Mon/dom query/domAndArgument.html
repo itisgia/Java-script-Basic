@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		iframe {
+			display: none;
+		}
+
+	</style>
+	<link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+</head>
+<body class="background">
+	<h1>Good Day</h1>
+	<ul id="listParent">
+		<li class="a-class">1</li>
+		<li class="a-class">2</li>
+		<li class="a-class">3</li>
+		<li class="a-class">4</li>
+		<li class="a-class">5</li>
+	</ul>
+	<p class="a-class">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, rem aut pariatur corporis, dolorum, libero autem deleniti porro magnam laborum accusamus et fugiat! Placeat quaerat nulla eos quas, quia libero.</p>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto quod, totam vel hic aperiam laborum minus non vitae rerum culpa, voluptas obcaecati alias itaque, impedit quis harum nobis ea nam.</p>
+	<p class="question">"How was Tuesday's lesson?"</p>
+	<iframe src="https://giphy.com/embed/Wg6sfwn9f0sJq" width="427" height="480" frameBorder="0" class="giphy-embed answer" allowFullScreen></iframe>
+	<h4 class="a-class"></h4>
+	<script>
+ //just put vars on the top so you can see all the vars easily.
+
+
+		(function(){
+
+  //     // get the DOM
+	// 		var tagEl = document.getElementsByTagName('h1');
+	//
+  //       console.log(tagEl);
+	//
+  //       tagEl["0"].style.textAlign = 'center';
+  //       tagEl["0"].style.fontSize = '3em'
+  //       tagEl["0"].style.color = '#ba7939'
+	//
+  //     //backgroundColor change function
+  //     function bodyColor () {
+	//
+  //       var backgGC = document.getElementsByClassName('background');
+	//
+  //         console.dir(backgGC);
+  //         backgGC["0"].style.backgroundColor = '#c3c4c0'
+  //     }
+  //     bodyColor();
+	//
+  //     // GIF display block function
+  //     function gif () {
+  //       var gifBlock = document.getElementsByClassName('giphy-embed answer');
+  //       var fontChange = document.getElementsByClassName('question');
+	//
+	//
+  //         console.dir(gifBlock);
+  //         console.dir(fontChange);
+	//
+  //         gifBlock["0"].style.display = 'block';
+  //         gifBlock["0"].style.margin = '0 auto';
+  //         //font change getElementsByTagName
+  //         fontChange["0"].style.fontFamily = 'Indie Flower,  cursive';
+  //         fontChange["0"].style.fontSize = '2.3em';
+  //     }
+  //     gif();
+	//
+	//
+	//
+  // //list style remove <ul>
+  //     function dotsRemove () {
+  //       // var dots = document.querySelectorAll('.a-class');
+  //       // console.dir(dots);
+  //       // dots.style.listStyle = 'none';
+	//
+  //       //getting DOM
+  //       var tagEl = document.getElementsByTagName('UL');
+	// 			var tagP = document.getElementsByTagName('P');
+	// 			//DOM for <li> & <p> class called a-calss
+  //       var pColour = document.querySelectorAll('.a-class')[5];
+  //      // console ready
+  //         console.dir(tagEl);
+  //         console.log(pColour); // returns to nodeList.
+	//
+  //         tagEl["0"].style.listStyle = 'none';
+	// 				//
+  //         pColour.style.width = '30%';
+  //         pColour.style.fontSize = '5em';
+  //         pColour.style.margin = '0 auto';
+	//
+	//
+	// 				tagP["0"].style.color = 'white';
+  //     }
+  //     dotsRemove();
+
+
+
+
+
+
+	// HOW TO USE ARGUMENTS
+	//
+	// function styleChange(element, prop, value ){
+	//
+	// 	//can be changes to this
+	// 	console.log(element);
+	// 	console.log(prop);
+	// 	console.log(value);
+	// 	// getEl.style.color = blue;
+	// 	element.style[prop] = value; //works
+	// 	element.style.prop = value;// not work
+	// 	//why?
+	//
+	// 	console.log(element + 'flag');
+	// }
+	// styleChange(questionP, 'fontSize', '88px');
+
+	var getEl = document.getElementById('listParent');
+	var fullList = document.querySelector('#listParent');
+	var getAllPs = document.querySelectorAll('p');
+	var questionP = getAllPs[2];
+	var gimmeH4 = document.querySelector('h4');
+	var p = document.createElement('p');
+
+ 	p.innerText = 'This is brabd new message tehe '
+	gimmeH4.after(p)
+	p.setAttribute('id', 'idName');
+	p.setAttribute('class', 'some-class');
+	p.setAttribute('style', 'font-size: 44px; font-style: italic; color: pink;')
+
+function fontChange (element, font) {
+
+	element.style.fontFamily  = font;
+}
+
+fontChange(questionP,'Indie Flower' );
+
+
+function sizeChange(element, font) {
+	element.style.fontSize = font;
+}
+
+sizeChange(questionP, '90px' );
+
+function colorChange (element , value){
+	element.style.color = value;
+}
+colorChange(questionP, 'blue' );
+
+
+//my confusing part
+
+function textChange (element , one){
+	console.dir(element);
+	element.childNodes[1].innerText = one;
+}
+
+textChange(fullList, 'one' );
+
+
+})();//life ENDS
+	</script>
+</body>
+</html>
