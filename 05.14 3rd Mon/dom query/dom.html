@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		iframe {
+			display: none;
+		}
+
+	</style>
+	<link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+</head>
+<body class="background">
+	<h1>Good Day</h1>
+	<ul id="listParent">
+		<li class="a-class">1</li>
+		<li class="a-class">2</li>
+		<li class="a-class">3</li>
+		<li class="a-class">4</li>
+		<li class="a-class">5</li>
+	</ul>
+	<p class="a-class">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, rem aut pariatur corporis, dolorum, libero autem deleniti porro magnam laborum accusamus et fugiat! Placeat quaerat nulla eos quas, quia libero.</p>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto quod, totam vel hic aperiam laborum minus non vitae rerum culpa, voluptas obcaecati alias itaque, impedit quis harum nobis ea nam.</p>
+	<p class="question">"How was Tuesday's lesson?"</p>
+	<iframe src="https://giphy.com/embed/Wg6sfwn9f0sJq" width="427" height="480" frameBorder="0" class="giphy-embed answer" allowFullScreen></iframe>
+	<h4 class="a-class"></h4>
+	<script>
+//
+//   :checkered_flag:*Checkpoint - DOM Queries Lite:*
+
+// Use at least 3 different DOM queries to access the elements in (dom-queries-template.html) and change their css properties:
+
+// - *_You cannot use document.getElementById();_*
+// - Remember to place your DOM query variables in a suitable location within your script (accesibility/scope)
+// - Style adjustments can relate to any css property - (font-size, color, margin, padding etc)
+// - Name your functions appropriately and use comments where required - write clean and legible code
+
+		(function(){
+
+      // get the DOM
+			var tagEl = document.getElementsByTagName('h1');
+
+        console.log(tagEl);
+
+        tagEl["0"].style.textAlign = 'center';
+        tagEl["0"].style.fontSize = '3em'
+        tagEl["0"].style.color = '#ba7939'
+
+      //backgroundColor change function
+      function bodyColor () {
+        var backgGC = document.getElementsByClassName('background');
+          console.dir(backgGC);
+          backgGC["0"].style.backgroundColor = '#c3c4c0'
+      }
+      bodyColor();
+
+      // GIF display block function
+      function gif () {
+        var gifBlock = document.getElementsByClassName('giphy-embed answer');
+        var fontChange = document.getElementsByClassName('question');
+
+
+          console.dir(gifBlock);
+          console.dir(fontChange);
+
+          gifBlock["0"].style.display = 'block';
+          gifBlock["0"].style.margin = '0 auto';
+          //font change getElementsByTagName
+          fontChange["0"].style.fontFamily = 'Indie Flower,  cursive';
+          fontChange["0"].style.fontSize = '2.3em';
+      }
+      gif();
+
+  //list style remove
+      function dotsRemove () {
+        // var dots = document.querySelectorAll('.a-class');
+        // console.dir(dots);
+        // dots.style.listStyle = 'none';
+
+        //getting DOM
+        var tagEl = document.getElementsByTagName('UL');
+        var pColour = document.querySelectorAll('.a-class');
+       // console ready
+          console.dir(tagEl);
+          console.log(pColour);
+
+          tagEl["0"].style.listStyle = 'none';
+          pColour[5].style.width = '40%';
+          pColour[5].style.fontSize = '4em';
+          pColour[5].style.margin = '0 auto';
+          pColour[1].style.color = 'white';
+      }
+      dotsRemove();
+		})();//life ENDS
+	</script>
+</body>
+</html>
