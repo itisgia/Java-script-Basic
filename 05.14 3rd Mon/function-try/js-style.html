@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Stylinh with JS</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      (function () {
+
+        //setting variables for creating <p>,<h1> tags
+        var headerTag = document.createElement('h1');
+        var headerText = document.createTextNode('Welcome to the page 😻');
+        // create a <p> elemenet
+        var textTag = document.createElement('p');
+        // create innerText in <p> elemenet
+        var innerText = document.createTextNode('I tried to find the rhythm of the world where I used I used to live. I followed the current. I was silent, attentive, I made a conscious effort to smile, nod, stand, and perform the millions of gestures that constitute life on earth');
+        //add innertext into the <p> tag
+
+        //create <h1> and fire the function
+        function addHeader() {
+          headerTag.appendChild(headerText);
+          document.body.appendChild(headerTag)
+        }
+        addHeader();
+
+
+        //style <h1>
+        function styleH1 (colour, size, align){
+          var topHeader = document.getElementsByTagName('h1');
+          var topHeaderIn = topHeader["0"]
+          console.dir(topHeaderIn);
+          topHeaderIn.style.color = colour;
+          topHeaderIn.style.fontSize = size;
+          topHeaderIn.style.textAlign = align;
+        }
+        styleH1('#60777a', '3em', 'center' );
+
+        //creaate <p> tag and fire the function
+        function addPText(){
+          textTag.appendChild(innerText);
+          //add text into the body
+          document.body.appendChild(textTag);
+        }
+        addPText();
+
+        // style <p> tag using arguments
+        function stylePTag(width, border, radious, middle){
+          var tagP = document.getElementsByTagName('p');
+          tagPIn = tagP[0].style;
+          tagPIn.width =width;
+          tagPIn.border = border;
+          tagPIn.borderRadius = radious;
+          tagPIn.textAlign = middle
+          tagPIn.display = 'block';
+          tagPIn.margin = '0 auto';
+          tagPIn.padding = '30px';
+          tagPIn.fontSize = '2em';
+
+        }
+        stylePTag('40%','2px solid #a4c5d8','30px', 'center');
+
+
+
+      })();//iife ENDS
+    </script>
+  </body>
+</html>
