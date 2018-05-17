@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Loop</title>
+    <style media="screen">
+      html{
+        font-family:  arial;
+      }
+      ul{
+        list-style: none;
+      }
+      li{
+        padding: 0.5em;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+
+
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+      <li>6</li>
+      <li>7</li>
+      <li>8</li>
+    </ul>
+    <script type="text/javascript">
+    //iife A
+    // (function () {
+    //   // var myArray =['a','b','c','d','e'];
+    //   //   for (var i = 0; i < myArray.length; i++) {
+    //   //     // console.log(myArray.length);
+    //   //     // console.log(i+' counter');
+    //   //     // console.log(myArray[i]);
+    //   //   }
+    //
+    //   })();//iife ENDS
+    //
+    //
+    //   (function() {
+    //     var myArray =['a','b','c','d','e'];
+    //     var listItem = document.querySelectorAll('li');
+    //     // console.log(listItem)
+    //
+    //     // loop function
+    //     function loopListItem(){
+    //       //for loop
+    //       for (var i = 0; i < listItem.length; i++) {
+    //         //use log in the for function
+    //         console.dir(listItem[i]);
+    //         //change all the colors of li to pink
+    //         listItem[i].style.color = 'pink';
+    //         listItem[i].style.fontSize = '1em';
+    //
+    //         // listItem[i];
+    //       }
+    //     }
+    //     loopListItem();
+    //
+    //   function LoopThreeListItem(){
+    //     //changing the colout to blue.
+    //     //compare the loop above and see WHAT'S THE DIFFERENCES
+    //     for (var i = 0; i < 2; i++) {
+    //       console.dir(listItem[i]);
+    //       //change all the colors of li
+    //       listItem[i].style.color = 'blue';
+    //       listItem[i].style.fontSize = '3em';
+    //      }
+    //   }
+    //   LoopThreeListItem();
+
+
+
+      // }());
+
+      //iife B
+      (function() {
+        var myArray =['a','b','c','d','e','d','e',1,5,'z',567,'a','a'];
+        var storageArry = [];
+        function usingArraysToStore(){
+          //for loop
+          // i stands for 1) incrememt 2) iterlate
+          for (var i = 0; i < myArray.length; i++) {
+            if (myArray[i] === 'a') {
+              // Here we are pushing each 'a' item to myStorage
+              storageArry.push(myArray[i]);
+                // the reason why you use myarray[i] instead of using 'a'
+              // storageArry.push('bbb');
+              // cuz it 'bbb' pushed. so rerefernceing is a good.
+
+            }//if statement ENDS
+
+            // console.log(myArray[i]);
+
+          }//for loops ENDS
+          alert('I count ' + storageArry.length + ' a\'s in total')
+          console.log(storageArry);
+
+        }//function ENDS
+        usingArraysToStore();
+
+      }());
+
+    </script>
+  </body>
+
+</html>
