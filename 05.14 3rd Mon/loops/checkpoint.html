@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      ul{
+        list-style: none;
+      }
+      li{
+        font-size: 2em;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+      <li>6</li>
+    </ul>
+
+
+    <script type="text/javascript">
+      (function() {
+        //get DOM
+        var x = document.querySelectorAll('li');
+
+        function Change(path,colour) {
+
+          for (var i = 0; i < 1; i++) {
+            x[i] = path;
+            path.style.color = colour
+          } //for loops ENDS
+
+          for (var i = 0; i < 2; i++) {
+            x[i] = path;
+            path.style.color = colour
+          } //for loops ENDS
+        } //function ENDS
+
+        Change(x[0],'red');
+        Change(x[1],'pink');
+
+
+
+
+      }()); //iife ENDS
+    </script>
+  </body>
+</html>
