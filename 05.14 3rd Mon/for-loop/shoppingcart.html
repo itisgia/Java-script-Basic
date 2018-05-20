@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Shopping Cart</title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+
+    var shoppingCart = [
+        {item: `soap`, price: 4.99},
+        {item: `hammer`, price: 19.60},
+        {item: `tissues`, price: 2.95},
+        {item: `chocolates`, price: 5.95},
+        {item: `fruit`, price: 27.60},
+        {item: `oil`, price: 80.95},
+        {item: `tv`, price: 220.00},
+        {item: `phone`, price: 100.60},
+        {item: `meat`, price: 12.95}
+      ];
+
+    var newArray =[];
+    var priceArray =[];
+
+    //put only items into the array
+    function itemBox(){
+      for (var i = 0; i < shoppingCart.length; i++) {
+          newArray.push(shoppingCart[i].item);
+        }//for loop ENDS
+        console.log(newArray);
+      }//function ENDS
+      itemBox();
+
+     //sorting the item in newArray "alphabetically"
+      function itemsort(){
+        newArray.sort();
+        console.log(newArray);
+      }
+      itemsort();
+
+    // put only prices into the price array
+      function priceBox() {
+        for (var i = 0; i < shoppingCart.length; i++) {
+          priceArray.push(shoppingCart[i].price);
+        }
+          console.log(priceArray);
+      }
+      priceBox();
+
+    //sorting price lowest to highest
+      priceArray.sort(function(a,b){
+        return a - b;
+      });
+      console.log(priceArray);
+      // console.log(shoppingCart);
+    </script>
+  </body>
+</html>

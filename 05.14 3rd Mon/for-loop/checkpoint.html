@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      ul{
+        list-style: none;
+      }
+      li{
+        font-size: 2em;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+      <li>6</li>
+    </ul>
+
+
+    <script type="text/javascript">
+      (function() {
+        //get DOM
+        var x = document.querySelectorAll('li');
+
+
+       // This fuctuon gives li to different colours.
+        function Change(path,colour) {
+
+          for (var i = 0; i < 1; i++) {
+            x[i] = path;
+            path.style.color = colour
+          } //for loops ENDS
+
+          for (var i = 0; i < 2; i++) {
+            x[i] = path;
+            path.style.color = colour
+          }
+
+          // THIS GIVES CLASS NAME TO LI
+          for (var i = 0; i < x.length; i++) {
+            x[i].className = 'some-calss'
+
+          }//for loops ENDS
+        } //function ENDS
+
+        Change(x[0],'red');
+        Change(x[1],'pink');
+        Change(x[2],'yellow');
+
+
+      function total(){
+
+        var theArray = [11,'a',22,'b',55,'c',84,'d',101,'something'];
+        var storeData=[];
+        var sum = 0;
+
+        for (var i = 0; i < theArray.length; i++) {
+
+          // console.log(theArray);
+
+         // if theArray is numbers
+          if(theArray[i] === parseInt(theArray[i])){
+
+          //pushing only numners inti the storeData
+            storeData.push(theArray[i]);
+
+          } //if statement ENDs
+        } //loop statement ENDS
+
+
+        // total numbers
+        for (var i = 0; i < storeData.length; i++) {
+
+          //11 + 22 + 55+ 84 + 101
+          sum += storeData[i];
+        }
+        console.log(storeData);
+        console.log(sum);
+      }//function ENDS
+      total();
+
+
+    })(); //iife ENDS
+    </script>
+  </body>
+</html>
