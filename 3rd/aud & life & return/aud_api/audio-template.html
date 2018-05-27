@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button id="play">
+		Play
+	</button>
+
+	<button id="pause">
+		Pause
+	</button>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.js">
+
+</script>
+	<script>
+
+
+		var audioObj = new Audio();
+		// console.dir(music);
+		audioObj.src = 'frigia.mp3';
+		audioObj.play();
+
+		//getting document first. ALWAYS
+		function init () {
+			var playbutton = document.getElementById('play');
+			playbutton.addEventListner('click', playAudio,false); //event listner
+	 }
+
+	 function playAudio (){
+
+		 if(newAudio.paused) //pasued is property. check thru console.dir(newAudio)
+			 audioObj.play();
+	 }
+
+
+
+
+
+	</script>
+</body>
+</html>

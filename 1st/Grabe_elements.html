@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<ul class="list-thing" id="listThing">
+		<li class="inner">A</li>
+		<li class="inner">B</li>
+		<li class="inner">C</li>
+		<li class="inner">D</li>
+		<li class="inner">E</li>
+		<li class="inner">F</li>
+		<li class="inner">G</li>
+	</ul>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.js"></script> 
+<script type="text/javascript">
+
+	// var getList = document.getElementsByClassName('inner');
+	// console.dir(/*typeof*/ getList[3].innerText);  //typeof =
+
+
+	var getItAllWithjQuery = $('.inner');
+	console.log(getItAllWithjQuery[5].innerText);
+
+</script>
+</body>
+</html>

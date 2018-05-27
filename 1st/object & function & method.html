@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Docment</title>
+  </head>
+  <body>
+
+  </body>
+
+<!-- <script type="text/javascript">
+	// FIRST OBJECT SECTION
+	// how could images in here?
+		var myObj = {
+
+			aProperty:'first property',
+			bProperty:'second property',
+			cProperty:'third property',
+			innerObjOne: {
+				dProperty:'img/loream.jpg',
+				eProperty:'5 property',
+				fProperty:'6 property'
+			},    // }, // not ';'just ',''
+			innerObjTwo: {
+				a: 1,
+				b: 2,
+				c: 3,
+				dArray : ['a','b','c',{
+					arrayProp: 'really'
+				}]
+			},
+			// aMethod: function () {
+			// 	alert(this.aProperty); //it's doing nothing. so you need to call the functuon
+			// }
+			 aMethod: function (a, b) {
+			 	consol.log();
+				var sum = a + b;
+				console.log(sum);
+			}
+
+		};
+
+		// myObj.aMethod();
+
+		myObj.aMethod(myObj.innerObjTwo.a, myObj.innerObjTwo.b);	
+		// console.log(myObj.innerObjTwo.dArray[3].arrayProp); 
+
+		//when accesing the dpecifiv one in array [3]
+</script> -->
+
+<script type="text/javascript">
+	// FIRST OBJECT SECTION
+	// how could images in here?
+		var myObj = {
+
+			aProperty:'first property',
+			bProperty:'second property',
+			cProperty:'third property',
+			innerObjOne: {
+				dProperty:'img/loream.jpg',
+				eProperty:'5 property',
+				fProperty:'6 property'
+			}, 
+			innerObjTwo: {
+				a: 1,
+				b: 2,
+				c: 3,
+				dArray : ['a','b','c',{
+					arrayProp: 'really buddy biddy!'
+				}]
+			},
+
+			aMethod: function () {
+			 	// consol.log(this);   //'this'  is a reserved word in js. use it as a reference the object.
+			 	alert(myObj.innerObjTwo.dArray[3].arrayProp)
+				
+			}
+
+			// function () //you can't write a fnctuon insefe the objuest. it will break.
+
+		};
+
+		// myObj.aMethod();
+
+		//write a function declartion will trigger a method after 8 secnds
+
+
+	// 1.setTimeout(myObj.aMethod, 8000);
+
+	// 2.  function eight () {
+	// 	myObj.aMethod();
+	// }
+	// setTimeout(eight.0);
+
+	// eight(); //firing the function
+
+	//3.  function eight () {
+	//  	setTimeout(myObj.aMethod,0);
+	// // 	myObj.aMethod();
+	// }
+   // eight();
+</script>
+</html>
