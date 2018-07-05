@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Playing with Vue</title>
+  </head>
+  <body>
+    <!--  it has an same Id as el  -->
+    <div id="app">
+      {{ anotherMsg.inside }}
+      <p>{{message}}</p>
+    </div>
+
+    <div id="app-2">
+      <span v-bind:title="message">
+        <!-- v-bind -->
+        Hover your mouse over me for a few seconds
+        to see my dynamically bound title!
+      </span>
+    </div>
+    <div id="app-3">
+      <span v-if="seen">Now you see me</span>
+    </div>
+
+    <div id="app-4">
+        <ol>
+          <li v-for="t in arrayData">
+            <!-- v-for works as a for loop -->
+            {{ t.text }}
+            <!-- compared to vue website -->
+            <!-- for loop using vue plugging data in  -->
+          </li>
+        </ol>
+      </div>
+
+      <div id="app-5">
+        <p>{{ message }}</p>
+        <button v-on:click="reverseMessage">Reverse Message</button>
+      </div>
+
+      <!-- out list componnent -->
+    <div class="outer">
+      <ul class="inner">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    <!-- out list componnent -->
+
+
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+      var app = new Vue({
+        el: '#app',
+        data: {
+          message: 'Hello Vue!',
+          anotherMsg: {
+            inside: 'Hi there inner'
+          }
+        }
+      })
+
+
+      var app2 = new Vue({
+        //elemet setting app -2s inside app 2 we git data
+        el: '#app-2',
+        data: {
+          message: 'You loaded this page on ' + new Date().toLocaleString()
+        }
+      })
+
+      var app3 = new Vue({
+        el: '#app-3',
+        data: {
+          seen: false
+           // trur/ false  work as a inline functuon. style disply none / block
+        }
+      })
+
+      var app4 = new Vue({
+        el: '#app-4',
+        data: {
+          //plural todos WOW it's just todo in html
+          arrayData: [
+            { text: 'Learn JavaScript' },
+            { text: 'Learn Vue' },
+            { text: 'Build something awesome' }
+          ]
+        }
+      })
+
+      var app5 = new Vue({
+        el: '#app-5',
+        data: {
+          message: 'Hello Vue.js!'
+        },
+        methods: {
+          reverseMessage: function () {
+            this.message = this.message.split('').reverse().join('')
+            //you can wrtie your own js wring own methods
+          }
+        }
+      })
+    </script>
+  </body>
+</html>
